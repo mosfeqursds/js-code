@@ -18,14 +18,14 @@ class Cat extends Animal {
   constructor(name) {
     super(name);
   }
-
+  //Cat class own method
   meow() {
     console.log(`${this.name} says meow.`);
   }
 
   // override the sleep method of Animal
   sleep() {
-    console.log(`${this.name} is taking a cat nap.`);
+    console.log(`${this.name} is sleeping now bed.`);
   }
 }
 
@@ -34,9 +34,9 @@ class Dog extends Animal {
   constructor(name) {
     super(name);
   }
-
+  // Dog class own method
   bark() {
-    console.log(`${this.name} says woof.`);
+    console.log(`${this.name} says bark.`);
   }
 
   // override the eat method of Animal
@@ -46,12 +46,14 @@ class Dog extends Animal {
 }
 
 // create an array of animals
-let animals = [new Cat("Mumu"), new Dog("Laltu")];
+let animals = [new Cat("cat"), new Dog("dog")];
 
 // loop through the array and call methods on each animal
 for (let animal of animals) {
   animal.eat();
   animal.sleep();
+
+  // The instanceof operator returns true if an object is an instance of a specified object:
 
   // check if the animal is a cat and call the meow method if it is
   if (animal instanceof Cat) {
